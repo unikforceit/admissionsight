@@ -1,12 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Heading</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdmissionSight</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Start Inner Banner -->
+    <section class="ad_innerBanner">
+      <div class="container">
+        <div class="ad_innerBanner_wrap">
+          <div class="adUni_header d-flex align-items-center">
+            <!-- logo -->
+            <div class="logo">
+              <img src="assets/img/harvard-university-logo.png" alt="" />
+            </div>
+            <!-- content -->
+            <div class="content">
+              <h4 class="title">Harvard GPA and SAT Requirements</h4>
+              <div class="ad_address d-flex align-items-center">
+                <div class="icon">
+                  <svg
+                    width="18"
+                    height="22"
+                    viewBox="0 0 18 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.6201 7.45C16.5701 2.83 12.5401 0.75 9.0001 0.75C9.0001 0.75 9.0001 0.75 8.9901 0.75C5.4601 0.75 1.4201 2.82 0.370095 7.44C-0.799905 12.6 2.3601 16.97 5.2201 19.72C6.2801 20.74 7.6401 21.25 9.0001 21.25C10.3601 21.25 11.7201 20.74 12.7701 19.72C15.6301 16.97 18.7901 12.61 17.6201 7.45ZM9.0001 12.46C7.2601 12.46 5.8501 11.05 5.8501 9.31C5.8501 7.57 7.2601 6.16 9.0001 6.16C10.7401 6.16 12.1501 7.57 12.1501 9.31C12.1501 11.05 10.7401 12.46 9.0001 12.46Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <p class="content">Cambridge, Massachusetts</p>
+              </div>
+            </div>
+          </div>
+          <div class="adUni_footer d-flex justify-content-between flex-wrap">
+            <div class="rating d-flex align-items-center">
+              <ul class="d-flex justify-centern-between align-items-center">
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+              </ul>
+              <p>(4 Reviews)</p>
+            </div>
+            <a href="#" class="adUni_innerBtn">
+              <span>
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.44 0.0999756C12.63 0.0999756 11.01 0.979976 10 2.32998C8.99 0.979976 7.37 0.0999756 5.56 0.0999756C2.49 0.0999756 0 2.59998 0 5.68998C0 6.87998 0.19 7.97998 0.52 8.99998C2.1 14 6.97 16.99 9.38 17.81C9.72 17.93 10.28 17.93 10.62 17.81C13.03 16.99 17.9 14 19.48 8.99998C19.81 7.97998 20 6.87998 20 5.68998C20 2.59998 17.51 0.0999756 14.44 0.0999756Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Add to me List
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Inner Banner -->
+
+    <!-- Start Tab One -->
+    <section class="ad_tabOne">
+      <div class="container">
+        <ul class="nav nav-tabs ad_uni-Tabs-custom" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="overview-tab"
+              data-toggle="tab"
+              href="#overview"
+              role="tab"
+              aria-controls="overview"
+              aria-selected="true"
+              >Overview <span></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="admission-tab"
+              data-toggle="tab"
+              href="#admission"
+              role="tab"
+              aria-controls="admission"
+              aria-selected="false"
+              >admission <span></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="cost-tab"
+              data-toggle="tab"
+              href="#cost"
+              role="tab"
+              aria-controls="cost"
+              aria-selected="false"
+              >cost <span></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="majors-tab"
+              data-toggle="tab"
+              href="#majors"
+              role="tab"
+              aria-controls="majors"
+              aria-selected="true"
+              >majors <span></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="diversity-tab"
+              data-toggle="tab"
+              href="#diversity"
+              role="tab"
+              aria-controls="diversity"
+              aria-selected="false"
+              >diversity <span></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="outcomes-tab"
+              data-toggle="tab"
+              href="#outcomes"
+              role="tab"
+              aria-controls="outcomes"
+              aria-selected="false"
+              >outcomes <span></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="salaries-tab"
+              data-toggle="tab"
+              href="#salaries"
+              role="tab"
+              aria-controls="salaries"
+              aria-selected="false"
+              >salaries <span></span
+            ></a>
+          </li>
+        </ul>
+        <!-- Tab content -->
+        <div class="tab-content ad_uni-Tabs-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="overview"
+            role="tabpanel"
+            aria-labelledby="overview-tab"
+          >
+            <h4 class="adUni_title">Admission Statistics</h4>
+            <div
+              class="adUni_Innercontent adUni_inner_padding adUni_border adUni_outer_margin"
+            >
+              <p>
+                Located in Cambridge, Massachusetts, Harvard University is a
+                large four year private college offering both undergrad and
+                graduate programs. In the most recent statistical year 40,248
+                prospective students applied, and 2,015 were granted admission.
+                Of those admitted 1,407 enrolled in the school. 19,030 students
+                are enrolled on a full time basis, and 11,361 attend part time.
+                In-state tuition for 2020/2021, excluding room and board, is
+                $49,653 plus fees of $4,349. Harvard is ranked 1 nationally in
+                the CollegeSimply.com 2022 U.S. Colleges Ranking.
+              </p>
+              <div class="adUni_tableOne"></div>
+            </div>
+            <h4 class="adUni_title">Admission Rate 5%</h4>
+            <div class="adUni_rate adUni_inner_padding adUni_border">
+              <div class="adUni_Innercontent">
+                <p>
+                  How hard is it to get into Harvard and can I get accepted? The
+                  acceptance rate at Harvard is 5% ranking #1 in Massachusetts
+                  for lowest rate of acceptance. Last year, 2,015 out of 40,248
+                  applicants were admitted making Harvard an extremely
+                  competitive school to get into with a very low chance of
+                  acceptance – even for applicants with the highest scores and
+                  grades.
+                  <br /><br />
+                  The school has exceptionally high admission requirements for
+                  SAT and ACT scores, generally admitting students who score in
+                  the top 2 percent (SAT 1460/1580 ACT 33/35). Harvard
+                  University typically accepts and attracts “A” average high
+                  school students with an average GPA around 4.0. Most incoming
+                  freshmen graduate in the top ten percent of their high school
+                  class. Of those applicants who were admitted, 70% enrolled.
+                  With over half of admitted students enrolling, acceptance by
+                  Harvard University is a prized outcome for many students.
+                </p>
+                <div class="adUni_tableOne"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="admission"
+            role="tabpanel"
+            aria-labelledby="admission-tab"
+          >
+            Admission
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cost"
+            role="tabpanel"
+            aria-labelledby="cost-tab"
+          >
+            cost
+          </div>
+          <div
+            class="tab-pane fade"
+            id="majors"
+            role="tabpanel"
+            aria-labelledby="majors-tab"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="diversity"
+            role="tabpanel"
+            aria-labelledby="diversity-tab"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="outcomes"
+            role="tabpanel"
+            aria-labelledby="outcomes-tab"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="salaries"
+            role="tabpanel"
+            aria-labelledby="salaries-tab"
+          >
+            ...
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Tab One -->
+
+    <!-- Start Slider -->
+    <!-- End Slider -->
+
+    <!-- Start SAT Scores -->
+    <section class="ad_uni-sat-score">
+      <div class="container">
+        <div class="ad_uni-sat-wrap">
+          <h4 class="adUni_title">SAT Scores you need to get in</h4>
+          <div
+            class="adUni_Innercontent adUni_inner_padding adUni_border adUni_outer_margin"
+          >
+            <h4 class="ad_uni-innerTitleHead">
+              What are the SAT requirements for students to be admitted to
+              Harvard University?
+            </h4>
+            <p>
+              Harvard University typically prefers applicants to be in the top 2
+              percent of SAT test takers. The school consistently takes SAT
+              composite scores down to 1460 on a 1600 scale, below which
+              admission should be considered a reach. We estimate some students
+              could be accepted with SAT’s as low as 1400. The estimated average
+              SAT composite for admitted freshman is 1520 out of 1600. The
+              school ranks #2 in Massachusetts for highest average SAT composite
+              score. A competitive SAT score is critical as 69 percent of
+              applicants submit SAT scores to the school.
+            </p>
+            <p class="ad_uni-innerFooterText">
+              Data Sources, IPEDS for Fall 2020 starting class
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End SAT Scores -->
+
+    <!-- Start Harvard SAT -->
+    <section class="ad_uni-sat-score-2">
+      <div class="container">
+        <h4 class="adUni_title">Harvard SAT Score Percentiles</h4>
+        <div class="ad_uni-sat-wrap-2 adUni_inner_padding adUni_border">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="ad_uni-sat-range"></div>
+            </div>
+            <div class="col-lg-6">
+              <div class="ad_uni-sat-applicants"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Harvard SAT -->
+
+    <!-- Start swiper section -->
+    <section class="adUni_seiper">
+      <div class="container"></div>
+    </section>
+    <!-- End swiper section -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
