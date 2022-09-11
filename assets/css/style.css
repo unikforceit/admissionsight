@@ -123,7 +123,7 @@ select:visited {
   padding: 8px;
   font-size: 24px;
   line-height: 1.6;
-  color: #fff;
+  color: #fff !important;
 }
 .adUni_innerBtn span {
   display: flex;
@@ -133,6 +133,9 @@ select:visited {
   border-radius: 32px;
   width: 48px;
   height: 48px;
+}
+.adUni_innerBtn:hover {
+  color: #fff;
 }
 
 .adUni_border {
@@ -308,4 +311,88 @@ select:visited {
 
 .ad_uni-sat-score-2 {
   margin-top: -13px;
+  padding-bottom: 57px;
+}
+
+.ad_uni-sat-range {
+  background-color: rgba(237, 136, 4, 0.05);
+  border-radius: 15px;
+  min-height: 434px;
+}
+
+.ad_uni-sat-applicants {
+  background-color: rgba(0, 35, 104, 0.05);
+  border-radius: 15px;
+  min-height: 434px;
+}
+
+.ad_uni-satItem {
+  padding: 40px 40px 30px;
+}
+.ad_uni-satItem .subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.8;
+  color: rgba(0, 35, 104, 0.7);
+}
+.ad_uni-satItem .title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.8;
+  color: #002368;
+}
+
+.ad_uni-satItem-lists {
+  padding-top: 24px;
+}
+.ad_uni-satItem-lists li:last-child .ad_uni-satItem-list {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.ad_uni-satItem-list {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 35, 104, 0.2);
+}
+.ad_uni-satItem-list .content {
+  position: relative;
+  line-height: 1.8;
+  color: #002368;
+  padding-left: 40px;
+}
+.ad_uni-satItem-list .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(0, 35, 104, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ad_uni-satItem-list .number {
+  font-weight: 600;
+  color: #002368;
+  line-height: 1.8;
+}
+
+.adUni_GPA-item {
+  padding-bottom: 12px;
+}
+.adUni_GPA-item .subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.8;
+  color: rgba(0, 35, 104, 0.7);
+}
+.adUni_GPA-item .title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.8;
+  color: #002368;
 }/*# sourceMappingURL=style.css.map */

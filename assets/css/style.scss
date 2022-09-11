@@ -66,6 +66,7 @@ ol,
 ul {
   padding-left: 0;
   margin: 0;
+
   li {
     list-style: none;
   }
@@ -147,7 +148,8 @@ select:visited {
   padding: 8px;
   font-size: 24px;
   line-height: 1.6;
-  color: #fff;
+  color: #fff !important;
+
   span {
     display: flex;
     justify-content: center;
@@ -157,6 +159,10 @@ select:visited {
     width: 48px;
     height: 48px;
   }
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 // Common
@@ -164,6 +170,7 @@ select:visited {
   border: 1px solid rgba(0, 35, 104, 0.15);
   border-radius: 16px;
 }
+
 .adUni_title {
   font-size: 40px;
   font-weight: 700;
@@ -171,6 +178,7 @@ select:visited {
   color: $secondary;
   padding-bottom: 16px;
 }
+
 .ad_uni-innerTitleHead {
   font-size: 22px;
   font-weight: $fw_semi_bold;
@@ -178,15 +186,18 @@ select:visited {
   color: $secondary;
   padding-bottom: 8px;
 }
+
 .ad_uni-innerFooterText {
   font-size: 16px;
   line-height: 1.8;
   color: rgba($secondary, 0.5);
   padding-top: 20px;
 }
+
 .adUni_inner_padding {
   padding: 24px 32px;
 }
+
 .adUni_outer_margin {
   margin-bottom: 56px;
 }
@@ -195,6 +206,7 @@ select:visited {
 .ad_innerBanner {
   padding: 104px 0px 80px;
 }
+
 .ad_innerBanner_wrap {
   position: relative;
   padding: 80px 32px 32px 80px;
@@ -204,6 +216,7 @@ select:visited {
   background-position: center center;
   border-radius: 16px;
   overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -214,10 +227,12 @@ select:visited {
     background: rgb(0, 35, 104);
     background: linear-gradient(90deg, #002368 0%, rgba(0, 0, 0, 0) 146.88%);
   }
+
   .adUni_header {
     position: relative;
     gap: 32px;
     padding-bottom: 56px;
+
     .logo {
       flex: 0 0 auto;
       width: 116px;
@@ -228,9 +243,11 @@ select:visited {
       align-items: center;
       background-color: #fff;
     }
+
     .content {
       flex: 0 0 auto;
       max-width: 984px;
+
       .title {
         font-size: 56px;
         font-weight: $fw_bold;
@@ -238,8 +255,10 @@ select:visited {
         color: $light;
         padding-bottom: 16px;
       }
+
       .ad_address {
         gap: 15px;
+
         .content {
           font-size: 24px;
           line-height: 1.6;
@@ -248,13 +267,17 @@ select:visited {
       }
     }
   }
+
   .adUni_footer {
     position: relative;
     gap: 18px;
+
     .rating {
       gap: 18px;
+
       ul {
         gap: 8px;
+
         li {
           svg {
             path {
@@ -263,6 +286,7 @@ select:visited {
           }
         }
       }
+
       p {
         color: $light;
       }
@@ -274,6 +298,7 @@ select:visited {
 .ad_tabOne {
   padding-bottom: 43px;
 }
+
 .ad_uni-Tabs-custom {
   border-bottom: none;
   margin-bottom: 48px;
@@ -281,6 +306,7 @@ select:visited {
   overflow-x: scroll;
   gap: 67px;
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -291,9 +317,11 @@ select:visited {
     background-color: rgba($secondary, 0.2);
     z-index: -1;
   }
+
   &::-webkit-scrollbar {
     display: none;
   }
+
   a.nav-link {
     font-size: 32px;
     font-weight: $fw_semi_bold;
@@ -306,17 +334,20 @@ select:visited {
     position: relative;
     z-index: 1;
     transition: all 0.3s;
+
     &.active,
     &:hover {
       border-color: transparent;
       background: transparent !important;
       color: $secondary;
+
       span {
         opacity: 1;
         z-index: 1;
         background-color: $primary;
       }
     }
+
     span {
       display: inline-block;
       width: 100%;
@@ -334,4 +365,96 @@ select:visited {
 // Harvard SAT
 .ad_uni-sat-score-2 {
   margin-top: -13px;
+  padding-bottom: 57px;
+}
+
+.ad_uni-sat-range {
+  background-color: rgba($primary, 0.05);
+  border-radius: 15px;
+  min-height: 434px;
+}
+
+.ad_uni-sat-applicants {
+  background-color: rgba($secondary, 0.05);
+  border-radius: 15px;
+  min-height: 434px;
+}
+
+.ad_uni-satItem {
+  padding: 40px 40px 30px;
+  .subtitle {
+    font-size: 22px;
+    font-weight: $fw_semi_bold;
+    line-height: 1.8;
+    color: rgba($secondary, 0.7);
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: $fw_extraBold;
+    line-height: 1.8;
+    color: $secondary;
+  }
+}
+
+.ad_uni-satItem-lists {
+  padding-top: 24px;
+  li {
+    &:last-child {
+      .ad_uni-satItem-list {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.ad_uni-satItem-list {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba($secondary, 0.2);
+
+  .content {
+    position: relative;
+    line-height: 1.8;
+    color: $secondary;
+    padding-left: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: rgba($secondary, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .number {
+    font-weight: $fw_semi_bold;
+    color: $secondary;
+    line-height: 1.8;
+  }
+}
+
+.adUni_GPA-item{
+  padding-bottom: 12px;
+  .subtitle{
+    font-size: 22px;
+    font-weight: $fw_semi_bold;
+    line-height: 1.8;
+    color: rgba($secondary, 0.7);
+  }
+  .title{
+    font-size: 32px;
+    font-weight: $fw_extraBold;
+    line-height: 1.8;
+    color: $secondary;
+  }
 }
