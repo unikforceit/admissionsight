@@ -111,6 +111,10 @@ select:visited {
   color: inherit;
 }
 
+.row {
+  row-gap: 20px;
+}
+
 .adUni_innerBtn {
   width: 269px;
   height: 64px;
@@ -395,4 +399,99 @@ select:visited {
   font-weight: 800;
   line-height: 1.8;
   color: #002368;
+}
+
+.ad_uni-Tabs-justify {
+  gap: 16px;
+  margin-bottom: 56px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.ad_uni-Tabs-justify::-webkit-scrollbar {
+  display: none;
+}
+.ad_uni-Tabs-justify .nav-link {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+  color: #002368;
+  text-transform: capitalize;
+  padding: 16px 40px;
+  background: rgba(0, 35, 104, 0.1);
+  border: none;
+  border-radius: 8px;
+}
+.ad_uni-Tabs-justify .nav-link.active {
+  color: #fff;
+  background-color: #ed8804;
+}
+
+.adUni_table {
+  padding-top: 35px;
+}
+.adUni_table .table.adUni_table.table-bordered th,
+.adUni_table .table.adUni_table.table-bordered td {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #002368;
+  border: 1px solid #002368;
+}
+.adUni_table .table.adUni_table .thead-light {
+  background-color: rgba(0, 35, 104, 0.05);
+}
+.adUni_table .table.adUni_table .thead-light th {
+  background-color: transparent;
+}
+
+.adUni_swiperSliderWrap {
+  padding-top: 26px;
+}
+
+.adUni_sliderItem {
+  min-height: 425px;
+  border-radius: 16px;
+  background-color: rgba(0, 35, 104, 0.03);
+}
+.adUni_sliderItem .content {
+  padding: 28px 20px;
+}
+.adUni_sliderItem .content .title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #002368;
+  padding-bottom: 12px;
+}
+.adUni_sliderItem .content .info {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: rgba(0, 35, 104, 0.5);
+}
+
+.adUni_sliderArrow {
+  position: relative;
+  max-width: 148px;
+  margin-left: auto;
+  top: 22px;
+}
+@media screen and (max-width: 991px) {
+  .adUni_sliderArrow {
+    display: none;
+  }
+}
+.adUni_sliderArrow .swiper-button-next, .adUni_sliderArrow .swiper-button-prev {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 35, 104, 0.1);
+}
+.adUni_sliderArrow .swiper-button-next::after, .adUni_sliderArrow .swiper-button-prev::after {
+  display: none;
+}
+.adUni_sliderArrow .swiper-button-next svg path, .adUni_sliderArrow .swiper-button-prev svg path {
+  fill: #002368;
 }/*# sourceMappingURL=style.css.map */
