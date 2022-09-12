@@ -154,6 +154,11 @@ select:visited {
   color: #002368;
   padding-bottom: 16px;
 }
+@media screen and (max-width: 767px) {
+  .adUni_title {
+    font-size: 26px;
+  }
+}
 
 .ad_uni-innerTitleHead {
   font-size: 22px;
@@ -173,6 +178,11 @@ select:visited {
 .adUni_inner_padding {
   padding: 24px 32px;
 }
+@media screen and (max-width: 767px) {
+  .adUni_inner_padding {
+    padding: 20px;
+  }
+}
 
 .adUni_outer_margin {
   margin-bottom: 56px;
@@ -191,6 +201,11 @@ select:visited {
   background-position: center center;
   border-radius: 16px;
   overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .ad_innerBanner_wrap {
+    padding: 40px;
+  }
 }
 .ad_innerBanner_wrap::before {
   content: "";
@@ -221,12 +236,27 @@ select:visited {
   flex: 0 0 auto;
   max-width: 984px;
 }
+@media screen and (max-width: 991px) {
+  .ad_innerBanner_wrap .adUni_header .content {
+    max-width: 626px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ad_innerBanner_wrap .adUni_header .content {
+    max-width: 265px;
+  }
+}
 .ad_innerBanner_wrap .adUni_header .content .title {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.1;
   color: #ffffff;
   padding-bottom: 16px;
+}
+@media screen and (max-width: 767px) {
+  .ad_innerBanner_wrap .adUni_header .content .title {
+    font-size: 29px;
+  }
 }
 .ad_innerBanner_wrap .adUni_header .content .ad_address {
   gap: 15px;
@@ -258,22 +288,11 @@ select:visited {
 }
 
 .ad_uni-Tabs-custom {
-  border-bottom: none;
+  border-bottom: 2px solid rgba(0, 35, 104, 0.2);
   margin-bottom: 48px;
   flex-wrap: nowrap;
   overflow-x: scroll;
   gap: 67px;
-  position: relative;
-}
-.ad_uni-Tabs-custom::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: rgba(0, 35, 104, 0.2);
-  z-index: -1;
 }
 .ad_uni-Tabs-custom::-webkit-scrollbar {
   display: none;
@@ -333,6 +352,11 @@ select:visited {
 .ad_uni-satItem {
   padding: 40px 40px 30px;
 }
+@media screen and (max-width: 767px) {
+  .ad_uni-satItem {
+    padding: 20px;
+  }
+}
 .ad_uni-satItem .subtitle {
   font-size: 22px;
   font-weight: 600;
@@ -367,9 +391,9 @@ select:visited {
   padding-left: 40px;
 }
 .ad_uni-satItem-list .content::before {
-  content: "";
+  content: url(../img/arrow.svg);
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   width: 28px;
   height: 28px;
@@ -428,6 +452,7 @@ select:visited {
 
 .adUni_table {
   padding-top: 35px;
+  overflow-x: scroll;
 }
 .adUni_table .table.adUni_table.table-bordered th,
 .adUni_table .table.adUni_table.table-bordered td {
