@@ -236,6 +236,11 @@ select:visited {
   flex: 0 0 auto;
   max-width: 984px;
 }
+@media screen and (max-width: 1200px) {
+  .ad_innerBanner_wrap .adUni_header .content {
+    max-width: 626px;
+  }
+}
 @media screen and (max-width: 991px) {
   .ad_innerBanner_wrap .adUni_header .content {
     max-width: 626px;
@@ -291,11 +296,23 @@ select:visited {
   border-bottom: 2px solid rgba(0, 35, 104, 0.2);
   margin-bottom: 48px;
   flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow: scroll hidden;
   gap: 67px;
 }
 .ad_uni-Tabs-custom::-webkit-scrollbar {
   display: none;
+}
+@media screen and (max-width: 1400px) {
+  .ad_uni-Tabs-custom::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+}
+.ad_uni-Tabs-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 35, 104, 0.5);
+  border-radius: 200px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
 }
 .ad_uni-Tabs-custom a.nav-link {
   font-size: 32px;
@@ -429,10 +446,22 @@ select:visited {
   gap: 16px;
   margin-bottom: 56px;
   flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow: scroll hidden;
 }
 .ad_uni-Tabs-justify::-webkit-scrollbar {
   display: none;
+}
+@media screen and (max-width: 1400px) {
+  .ad_uni-Tabs-justify::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+}
+.ad_uni-Tabs-justify::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 35, 104, 0.5);
+  border-radius: 200px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
 }
 .ad_uni-Tabs-justify .nav-link {
   font-size: 20px;
@@ -450,21 +479,25 @@ select:visited {
   background-color: #ed8804;
 }
 
-.adUni_table {
+.adUni_table_wrap {
   padding-top: 35px;
-  overflow-x: scroll;
 }
-.adUni_table .table.adUni_table.table-bordered th,
-.adUni_table .table.adUni_table.table-bordered td {
+@media screen and (max-width: 991px) {
+  .adUni_table_wrap {
+    overflow-x: scroll;
+  }
+}
+.adUni_table_wrap .table.adUni_table.table-bordered th,
+.adUni_table_wrap .table.adUni_table.table-bordered td {
   font-size: 20px;
   line-height: 1.8;
   color: #002368;
   border: 1px solid #002368;
 }
-.adUni_table .table.adUni_table .thead-light {
+.adUni_table_wrap .table.adUni_table .thead-light {
   background-color: rgba(0, 35, 104, 0.05);
 }
-.adUni_table .table.adUni_table .thead-light th {
+.adUni_table_wrap .table.adUni_table .thead-light th {
   background-color: transparent;
 }
 
