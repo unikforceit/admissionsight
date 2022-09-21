@@ -142,6 +142,10 @@ select:visited {
   color: #fff;
 }
 
+.mb-16 {
+  margin-bottom: 16px;
+}
+
 .adUni_border {
   border: 1px solid rgba(0, 35, 104, 0.15);
   border-radius: 16px;
@@ -160,6 +164,25 @@ select:visited {
   }
 }
 
+.adUni_title2 {
+  height: 93px;
+  border-radius: 16px;
+  background-color: rgba(0, 35, 104, 0.05);
+  padding: 24px 32px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #002368;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .adUni_title2 {
+    height: auto;
+    font-size: 26px;
+    line-height: 1.8;
+  }
+}
+
 .ad_uni-innerTitleHead {
   font-size: 22px;
   font-weight: 600;
@@ -175,6 +198,10 @@ select:visited {
   padding-top: 20px;
 }
 
+.ad_uni-innerFooterText2 {
+  padding-top: 16px;
+}
+
 .adUni_inner_padding {
   padding: 24px 32px;
 }
@@ -184,8 +211,41 @@ select:visited {
   }
 }
 
+.adUni_inner_padding2 {
+  padding: 24px;
+}
+@media screen and (max-width: 767px) {
+  .adUni_inner_padding2 {
+    padding: 20px;
+  }
+}
+
 .adUni_outer_margin {
   margin-bottom: 56px;
+}
+
+.ad_rowBorder > .row {
+  position: relative;
+  row-gap: 56px;
+}
+.ad_rowBorder > .row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: rgba(0, 35, 104, 0.2);
+}
+@media screen and (max-width: 991px) {
+  .ad_rowBorder > .row::before {
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
 }
 
 .ad_innerBanner {
@@ -263,14 +323,6 @@ select:visited {
     font-size: 29px;
   }
 }
-.ad_innerBanner_wrap .adUni_header .content .ad_address {
-  gap: 15px;
-}
-.ad_innerBanner_wrap .adUni_header .content .ad_address .content {
-  font-size: 24px;
-  line-height: 1.6;
-  color: #ffffff;
-}
 .ad_innerBanner_wrap .adUni_footer {
   position: relative;
   gap: 18px;
@@ -286,6 +338,106 @@ select:visited {
 }
 .ad_innerBanner_wrap .adUni_footer .rating p {
   color: #ffffff;
+}
+
+.ad_address {
+  gap: 15px;
+}
+.ad_address .content {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.ad_compareBanner {
+  padding: 104px 0 60px;
+}
+
+.ad_compareBanner_wrap {
+  position: relative;
+}
+.ad_compareBanner_wrap .ad_compareTag {
+  position: absolute;
+  top: 189px;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border: 24px solid #fff;
+  border-radius: 50%;
+  background-color: #002368;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1400px) {
+  .ad_compareBanner_wrap .ad_compareTag {
+    top: 140px;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .ad_compareBanner_wrap .ad_compareTag {
+    top: 110px;
+    width: 150px;
+    height: 150px;
+    border-width: 18px;
+  }
+}
+.ad_compareBanner_wrap .ad_compareTag span {
+  display: inline-block;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+@media screen and (max-width: 991px) {
+  .ad_compareBanner_wrap .ad_compareTag span {
+    font-size: 36px;
+  }
+}
+
+.ad_compareItem {
+  max-width: 648px;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .ad_compareItem {
+    max-width: 100%;
+  }
+}
+.ad_compareItem .compareThumb {
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.ad_compareItem .compareThumb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(71.94deg, #002368 0%, rgba(0, 0, 0, 0) 68.11%);
+}
+.ad_compareItem .compareContent .title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #002368;
+}
+@media screen and (max-width: 991px) {
+  .ad_compareItem .compareContent .title {
+    font-size: 24px;
+  }
+}
+.ad_compareItem .compareContent .ad_address .icon svg path {
+  fill: #002368;
+}
+.ad_compareItem .compareContent .ad_address .content {
+  color: #002368;
 }
 
 .ad_tabOne {
@@ -499,6 +651,13 @@ select:visited {
 }
 .adUni_table_wrap .table.adUni_table .thead-light th {
   background-color: transparent;
+}
+.adUni_table_wrap.adUni_table_wrap2 .table {
+  margin-bottom: 0;
+}
+.adUni_table_wrap.adUni_table_wrap2 .table.adUni_table.table-bordered th,
+.adUni_table_wrap.adUni_table_wrap2 .table.adUni_table.table-bordered td {
+  font-size: 16px;
 }
 
 .adUni_swiperSliderWrap {

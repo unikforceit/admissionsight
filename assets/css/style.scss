@@ -170,6 +170,9 @@ select:visited {
 }
 
 // Common
+.mb-16{
+  margin-bottom: 16px;
+}
 .adUni_border {
   border: 1px solid rgba(0, 35, 104, 0.15);
   border-radius: 16px;
@@ -181,8 +184,25 @@ select:visited {
   line-height: 1.4;
   color: $secondary;
   padding-bottom: 16px;
+
   @media screen and (max-width:767px) {
     font-size: 26px;
+  }
+}
+.adUni_title2{
+  height: 93px;
+  border-radius: 16px;
+  background-color: rgba($secondary, 0.05);
+  padding: 24px 32px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $secondary;
+  margin-bottom: 24px;
+  @media screen and (max-width:767px) {
+    height: auto;
+    font-size: 26px;
+    line-height: 1.8;
   }
 }
 
@@ -200,9 +220,20 @@ select:visited {
   color: rgba($secondary, 0.5);
   padding-top: 20px;
 }
+.ad_uni-innerFooterText2{
+  padding-top: 16px;
+}
 
 .adUni_inner_padding {
   padding: 24px 32px;
+
+  @media screen and (max-width:767px) {
+    padding: 20px;
+  }
+}
+.adUni_inner_padding2 {
+  padding: 24px;
+
   @media screen and (max-width:767px) {
     padding: 20px;
   }
@@ -210,6 +241,30 @@ select:visited {
 
 .adUni_outer_margin {
   margin-bottom: 56px;
+}
+
+.ad_rowBorder{
+  >.row{
+    position: relative;
+    row-gap: 56px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: rgba($secondary, 0.2);
+      @media screen and (max-width:991px) {
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
 
 // Inner Banner
@@ -226,6 +281,7 @@ select:visited {
   background-position: center center;
   border-radius: 16px;
   overflow: hidden;
+
   @media screen and (max-width:767px) {
     padding: 40px;
   }
@@ -260,12 +316,15 @@ select:visited {
     .content {
       flex: 0 0 auto;
       max-width: 984px;
+
       @media screen and (max-width:1200px) {
         max-width: 626px;
       }
+
       @media screen and (max-width:991px) {
         max-width: 626px;
       }
+
       @media screen and (max-width:767px) {
         max-width: 265px;
       }
@@ -276,18 +335,9 @@ select:visited {
         line-height: 1.1;
         color: $light;
         padding-bottom: 16px;
+
         @media screen and (max-width:767px) {
           font-size: 29px;
-        }
-      }
-
-      .ad_address {
-        gap: 15px;
-
-        .content {
-          font-size: 24px;
-          line-height: 1.6;
-          color: $light;
         }
       }
     }
@@ -319,6 +369,108 @@ select:visited {
   }
 }
 
+.ad_address {
+  gap: 15px;
+
+  .content {
+    font-size: 24px;
+    line-height: 1.6;
+    color: $light;
+  }
+}
+
+// Compaare banner
+.ad_compareBanner {
+  padding: 104px 0 60px;
+}
+.ad_compareBanner_wrap{
+  position: relative;
+  .ad_compareTag{
+    position: absolute;
+    top: 189px;
+    left: 49%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    border: 24px solid #fff;
+    border-radius: 50%;
+    background-color: $secondary;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:1400px) {
+      top: 140px;
+      left: 50%;
+    }
+    @media screen and (max-width:991px) {
+      top: 110px;
+      width: 150px;
+      height: 150px;
+      border-width: 18px;
+    }
+    span{
+      display: inline-block;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      @media screen and (max-width:991px) {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.ad_compareItem {
+  max-width: 648px;
+  overflow: hidden;
+  @media screen and (max-width:767px) {
+    max-width: 100%;
+  }
+
+  .compareThumb {
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(71.94deg, #002368 0%, rgba(0, 0, 0, 0) 68.11%);
+    }
+  }
+
+  .compareContent {
+    .title {
+      font-size: 32px;
+      font-weight: $fw_bold;
+      line-height: 1.2;
+      color: $secondary;
+      @media screen and (max-width:991px) {
+        font-size: 24px;
+      }
+    }
+
+    .ad_address {
+      .icon{
+        svg{
+          path{
+            fill: $secondary;
+          }
+        }
+      }
+      .content {
+        color: $secondary;
+      }
+    }
+  }
+}
+
 // Tab One
 .ad_tabOne {
   padding-bottom: 43px;
@@ -345,16 +497,18 @@ select:visited {
 
   &::-webkit-scrollbar {
     display: none;
+
     @media screen and (max-width:1400px) {
       display: block;
       height: 6px;
     }
+
     // &-track{
     //   background-color: rgba(green,30%);
     // }
     &-thumb {
       // background: rgba(0, 0, 0, 0.25);
-      background-color: rgba($secondary,.5);
+      background-color: rgba($secondary, .5);
       border-radius: 200px;
       border: 1px solid transparent;
       background-clip: padding-box;
@@ -421,9 +575,11 @@ select:visited {
 
 .ad_uni-satItem {
   padding: 40px 40px 30px;
+
   @media screen and (max-width:767px) {
     padding: 20px;
   }
+
   .subtitle {
     font-size: 22px;
     font-weight: $fw_semi_bold;
@@ -441,6 +597,7 @@ select:visited {
 
 .ad_uni-satItem-lists {
   padding-top: 24px;
+
   li {
     &:last-child {
       .ad_uni-satItem-list {
@@ -487,12 +644,14 @@ select:visited {
 
 .adUni_GPA-item {
   padding-bottom: 12px;
+
   .subtitle {
     font-size: 22px;
     font-weight: $fw_semi_bold;
     line-height: 1.8;
     color: rgba($secondary, 0.7);
   }
+
   .title {
     font-size: 32px;
     font-weight: $fw_extraBold;
@@ -506,23 +665,27 @@ select:visited {
   margin-bottom: 56px;
   flex-wrap: nowrap;
   overflow: scroll hidden;
+
   &::-webkit-scrollbar {
     display: none;
+
     @media screen and (max-width:1400px) {
       display: block;
       height: 6px;
     }
+
     // &-track{
     //   background-color: rgba(green,30%);
     // }
     &-thumb {
       // background: rgba(0, 0, 0, 0.25);
-      background-color: rgba($secondary,.5);
+      background-color: rgba($secondary, .5);
       border-radius: 200px;
       border: 1px solid transparent;
       background-clip: padding-box;
     }
   }
+
   .nav-link {
     font-size: 20px;
     font-weight: $fw_semi_bold;
@@ -533,6 +696,7 @@ select:visited {
     background: rgba(0, 35, 104, 0.1);
     border: none;
     border-radius: 8px;
+
     &.active {
       color: #fff;
       background-color: $primary;
@@ -542,12 +706,15 @@ select:visited {
 
 .adUni_table_wrap {
   padding-top: 35px;
+
   @media screen and (max-width:991px) {
     overflow-x: scroll;
   }
+
   .table {
     &.adUni_table {
       &.table-bordered {
+
         th,
         td {
           font-size: 20px;
@@ -556,10 +723,26 @@ select:visited {
           border: 1px solid $secondary;
         }
       }
+
       .thead-light {
         background-color: rgba($secondary, 0.05);
+
         th {
           background-color: transparent;
+        }
+      }
+    }
+  }
+  &.adUni_table_wrap2{
+    .table {
+      margin-bottom: 0;
+      &.adUni_table {
+        &.table-bordered {
+  
+          th,
+          td {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -569,12 +752,15 @@ select:visited {
 .adUni_swiperSliderWrap {
   padding-top: 26px;
 }
+
 .adUni_sliderItem {
   min-height: 425px;
   border-radius: 16px;
   background-color: rgba($secondary, 0.03);
+
   .content {
     padding: 28px 20px;
+
     .title {
       font-size: 20px;
       font-weight: $fw_bold;
@@ -582,6 +768,7 @@ select:visited {
       color: $secondary;
       padding-bottom: 12px;
     }
+
     .info {
       font-size: 16px;
       font-weight: $fw_medium;
@@ -590,15 +777,19 @@ select:visited {
     }
   }
 }
+
 .adUni_sliderArrow {
   position: relative;
   max-width: 148px;
   margin-left: auto;
   top: 22px;
+
   @media screen and (max-width: 991px) {
     display: none;
   }
+
   .swiper-button {
+
     &-next,
     &-prev {
       width: 56px;
@@ -608,9 +799,11 @@ select:visited {
       justify-content: center;
       align-items: center;
       background-color: rgba($secondary, 0.1);
+
       &::after {
         display: none;
       }
+
       svg {
         path {
           fill: $secondary;
